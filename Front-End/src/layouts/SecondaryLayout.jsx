@@ -16,6 +16,8 @@ const SecondaryLayout = () => {
 
     useEffect(() => {
         checkUserToken();
+        // eslint-disable-next-line
+
     }, [isLoggedIn]);
 
     return (

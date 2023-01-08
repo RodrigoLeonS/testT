@@ -18,6 +18,7 @@ const ProtectedRoute = (props) => {
 
     useEffect(() => {
         checkUserToken();
+        // eslint-disable-next-line
     }, [isLoggedIn]);
 
     return (

@@ -1,19 +1,22 @@
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import React from "react";
+import Navbar from "./NavBar";
 
 const HeaderDash = () => {
 
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
-    const logout = () => {
-        localStorage.clear();
-        navigate('/login');
-    }
+    // const logout = () => {
+    //     localStorage.clear();
+    //     navigate('/login');
+    // }
 
     return (
-        <div >
-                    <button className="button button--primary" onClick={logout}>Logout</button>
-        </div>
+        <header
+            className="header"
+        >
+            <Navbar className="container elements elements--header-nav" />
+        </header>
     );
 }
 

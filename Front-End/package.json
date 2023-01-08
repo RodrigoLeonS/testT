@@ -17,6 +17,7 @@
     "reactstrap": "^9.1.5",
     "sass": "^1.57.1",
     "scss": "^0.2.4",
+    "styled-components": "^5.3.6",
     "swiper": "^8.4.5",
     "web-vitals": "^2.1.4"
   },
