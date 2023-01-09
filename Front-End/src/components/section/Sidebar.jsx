@@ -14,8 +14,8 @@ class Sidebar extends React.Component {
             <SidebarContainer>
                 <div className={`sidebar ${this.state.visible ? 'visible' : 'hidden'}`}>
                     <div className="sidebar-menu container">
-                        <a href="https://www.google.com">Crear reservas</a>
-                        <a href="https://www.google.com">Ver mis reservas</a>
+                        <a href="/dashboard/reservas">Crear reservas</a>
+                        <a href="/dashboard/menu">Actualizar Menus</a>
                         <a href="https://www.google.com">Actualizar mis datos</a>
                     </div>
                     <div className="sidebar-logout">

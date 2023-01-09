@@ -32,12 +32,12 @@ class DashBoardPage extends React.Component {
             .then(data => this.setState({ data }));
     }
 
-    handleModifyClick = async(dateId) => {
-        // Lógica para modificar el elemento "item"
-        await ProductServer.modifydate(dateId);
-        this.setState(this.componentDidMount)
+    // handleModifyClick = async(dateId) => {
+    //     // Lógica para modificar el elemento "item"
+    //     await ProductServer.modifydate(dateId);
+    //     this.setState(this.componentDidMount)
 
-    }
+    // }
 
     handleDeleteClick = async(dateId) => {
         // Lógica para eliminar el elemento "item"

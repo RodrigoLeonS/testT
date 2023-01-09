@@ -52,6 +52,8 @@ class MenuReservas(models.Model):
     fecha = models.DateField()
     hora = models.TimeField()
     descripcion = models.CharField(max_length=400)
+    mesa = models.IntegerField()
+
     class Meta:
         managed = False
         db_table = 'menu_reservas'

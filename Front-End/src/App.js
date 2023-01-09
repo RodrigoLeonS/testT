@@ -1,5 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
+import DashboardUpdate from './components/dashboard/DashboardUpdate';
+import MenuUpdate from './components/dashboard/MenuUpdate';
 import OurProductsFilter from './components/products/OurProductsFilter';
 import ProtectedRoute from './context/AuthContext';
 import PrimaryLayout from './layouts/PrimaryLayout';
@@ -28,8 +30,10 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path='/register' element={<RegisterPage />} />
         </Route>
-        <Route path="/dashboard" element={<SecondaryLayout />}>
-          <Route index element={<ProtectedRoute><DashBoardPage/></ProtectedRoute>}/>
+        <Route path="/dashboard" element={<ProtectedRoute><SecondaryLayout /></ProtectedRoute>}>
+          <Route index element={<DashBoardPage/>}/>
+          <Route path="/dashboard/reservas" element={<DashboardUpdate/>}/>
+          <Route path="/dashboard/menu" element={<MenuUpdate/>}/>
         </Route>
         <Route path="*" element={<div>404</div>}/>
       </Routes>

@@ -11,7 +11,7 @@ const RegisterPage = () => {
     const [email, setEmail] = useState("");
 
     const registerUser = async (username, password, password2) => {
-        const response = await fetch("http://127.0.0.1:8000/api/register/", {
+        const response = await fetch("http://127.0.0.1:8000/api/listdate/", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

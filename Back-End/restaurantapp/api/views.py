@@ -6,9 +6,9 @@ from rest_framework import generics
 
 #serializer
 from .serializers import RegisterSerializer,ReservasSerializer,ProductsSerializer,CategoriesSerializer
+
 #modelos
 from .models import MenuReservas,MenuCategories,MenuProducts
-
 
 class HelloView(APIView):
     permission_classes = (IsAuthenticated,)             # <-- Se indica que tiene que estar autenticado para ingresar a esta vista
@@ -84,6 +84,13 @@ class ListProducts(APIView):
         data = MenuProducts.objects.all()
         serData = ProductsSerializer(data,many=True)
         return Response(serData.data)
+    
+    def post(self,request):
+        serData = ProductsSerializer(data=request.data)
+        serData.is_valid(raise_exception=True)
+        serData.save()
+        
+        return Response(serData.data) 
     
 class ListProductsDetail(APIView):
     def get(self,request,id):

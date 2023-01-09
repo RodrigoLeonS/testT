@@ -24,11 +24,6 @@ export const deletedate = async (dateId) => {
         method:'DELETE',
         })
 }
-export const modifydate = async (dateId) => {
-    return await fetch(`${API_URL_LISTDATE}${dateId}`,{
-        method:'PUT',
-        })
-}
 
 export const listdate = async()=> {
     return await fetch(API_URL_LISTDATE)
